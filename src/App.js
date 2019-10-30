@@ -1,5 +1,6 @@
 import React from 'react';
 import ListCards from './components/ListCards'
+import './App.css'
 
 function App() {
   return (

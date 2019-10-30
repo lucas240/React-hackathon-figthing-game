@@ -14,7 +14,7 @@ import Card from './Card';
         axios.get('https://hackathon-wild-hackoween.herokuapp.com/monsters')
         .then(res => {
           console.log(res);
-          const datas = res.monsters;
+          const datas = res.data.monsters;
           
     
           this.setState({ monsters: datas });
@@ -23,7 +23,7 @@ import Card from './Card';
     
       render() {
         return (
-          <div>
+          <div className="row justify-content-center w-100 repolistContainer">
               {this.state.monsters.map(monster => {
                 return <Card {...monster} key={monster.id} />;
               })}
