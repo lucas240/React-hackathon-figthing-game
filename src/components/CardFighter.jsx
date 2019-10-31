@@ -3,7 +3,7 @@ import './Card.css'
 
 const CardFighter = ({ name, level, attack, defense, special, description, picture,  }) => {
   return (
-    <div className=" shadow mb-5">
+    <div className="card shadow mb-5">
       <img src={picture} className="card-img-top " alt="monster"/>
       <div className="card-body p-0">
         <h2 className="card-title text-center bg-dark text-white p-2">{name}</h2>
