@@ -26,8 +26,9 @@ class Fighter {
     }
     takeDamage(dmg){
         this.defense -= dmg
-        console.log(`${this.name}: ${this.defense} HP`);
-        return this.defense
+        const message =`${this.name}: ${this.defense} HP`
+        console.log(message);
+        return {defense: this.defense, message}
     }
 }
 

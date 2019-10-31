@@ -25,8 +25,6 @@ class ListCards extends React.Component {
   selectFighter(monster){
     this.setState({fighter: monster})
   }
-  
-  
 
   render() {
     return (

@@ -46,14 +46,14 @@ class Fight extends React.Component {
             const att = this.state.fighters[striker]
             const def = this.state.fighters[receiver]
             const actions = random(3)
-        
+            
             let damage;
             switch (true) {
                 case actions === 0:
                     damage = att.giveAcidSpray(def.name).attack
-                    newFeed.push(att.giveAcidSpray(def.name).message)
+                    const tookDamage0 = def.takeDamage(damage).message
+                    newFeed.push(att.giveAcidSpray(def.name).message, tookDamage0)
                     this.setState({feed: newFeed})
-                    def.takeDamage(damage)
                     if (def.defense <= 0) {
                         this.setState({displayLoser:`${def.name.toUpperCase()} LOSE !`});
                         return false
@@ -61,9 +61,9 @@ class Fight extends React.Component {
                     break;
                 case actions === 1:
                     damage = att.giveASlash(def.name).attack
-                    newFeed.push(att.giveASlash(def.name).message)
+                    const tookDamage1 = def.takeDamage(damage).message
+                    newFeed.push(att.giveASlash(def.name).message, tookDamage1)
                     this.setState({feed: newFeed})
-                    def.takeDamage(damage)
                     if (def.defense <= 0) {
                         this.setState({displayLoser:`${def.name.toUpperCase()} LOSE !`});
                         return false
@@ -71,9 +71,9 @@ class Fight extends React.Component {
                     break;
                 case actions === 2:
                     damage = att.Bite(def.name).attack
-                    newFeed.push(att.Bite(def.name).message)
+                    const tookDamage2 = def.takeDamage(damage).message
+                    newFeed.push(att.Bite(def.name).message, tookDamage2)
                     this.setState({feed: newFeed})
-                    def.takeDamage(damage)
                     if (def.defense <= 0) {
                         this.setState({displayLoser:`${def.name.toUpperCase()} LOSE !`});
                         return false
@@ -81,9 +81,9 @@ class Fight extends React.Component {
                     break;
                 case actions === 3:
                     damage = att.RipOfHisFlesh(def.name).attack
-                    newFeed.push(att.RipOfHisFlesh(def.name).message)
+                    const tookDamage3 = def.takeDamage(damage).message
+                    newFeed.push(att.RipOfHisFlesh(def.name).message, tookDamage3)
                     this.setState({feed: newFeed})
-                    def.takeDamage(damage)
                     if (def.defense <= 0) {
                         this.setState({displayLoser:`${def.name.toUpperCase()} LOSE !`});
                         return false
@@ -92,13 +92,13 @@ class Fight extends React.Component {
                 default:
                     break;
             }
+            sleep(400)
         }
-
     }
     render(){  
         console.log(this.state.feed);
         return(
-            <div className="row justify-content-around">
+            <div className="row justify-content-around w-100">
                 <div className="col-3 d-flex flex-column justify-content-center">
                     <CardFighter {...this.state.fighter1} />
                     <button type="button" className="btn btn-warning btn-lg" onClick={this.selectFighter1}>Send your monster</button>
