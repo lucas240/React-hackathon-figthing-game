@@ -92,7 +92,6 @@ class Fight extends React.Component {
                 default:
                     break;
             }
-            sleep(400)
         }
     }
     render(){  
