@@ -1,0 +1,6 @@
+.scroller {
+    width: auto;
+    height: 600px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+}
