@@ -14,7 +14,6 @@ class Fight extends React.Component {
             fighter2: {},
             fighters: [],
             displayLoser: '',
-            displayFight: '',
             feed: []
         };
         this.selectFighter1 = this.selectFighter1.bind(this)
@@ -106,7 +105,6 @@ class Fight extends React.Component {
                 </div>
                 <div className="col-6">
                     <button type="button" className="btn btn-danger btn-lg btn-block" onClick={this.fight}>FIGHT!!!</button>
-                    {/* <p>{this.state.displayFight}</p> */}
                     <h1 className="text-center m-2">{this.state.displayLoser}</h1>
                     <div className="scroller">
                         {
