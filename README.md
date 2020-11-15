@@ -1,6 +1,7 @@
-## URL du site
+## URL 
 
 https://battle-monsters.netlify.com/
 
-Jeu de combat:
-Sélectionner vos monstres et démarrer le combat pour voir le vainqueur.
+
+## Description
+This project is a figthing game, select your monsters and made them figth each other
