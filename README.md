@@ -4,4 +4,7 @@ https://battle-monsters.netlify.com/
 
 
 ## Description
-This project is a figthing game, it was made under 24 hour, select your monsters and made them figth each other
+This project is a fighting game created during a 24-hour hackathon.
+Select your monsters and make them fight each other!
+
+Built as part of my web development training.
